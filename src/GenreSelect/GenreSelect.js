@@ -1,26 +1,21 @@
-import react from "react";
+import React, { createElement } from "react"
+import GenreSelect from "../GenreSelect/GenreSelect";
 
-function GenreSelect(props) {
-  const Genres = ['Action', 'Comedy', 'Drama', 'Fantasy']
+class SearchForm extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return (<>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <span className="navbar-brand">Genres</span>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          {Genres.map((data, i) =>
-            <li className="nav-item">
-              <button name={i} className="btn btn-light" Value={data} >{data}</button>
-            </li>
-          )}
-        </ul>
-      </div>
-    </nav>
+  render() {
+    return createElement(
+      "div",
+      { className: "input-group" },
+      createElement("div", { className: "input-group" },
+        createElement("input", { className: "form-control", type: "text", value: this.props.searchText }),
+        createElement("button", { className: "btn btn-primary" }, "Search")
 
-  </>)
+      ))
+  }
 }
 
-export default GenreSelect
+export default SearchForm

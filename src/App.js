@@ -1,16 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import SearchForm from './SearchForm/SearchForm';
-import CounterForm from './Counter/CounterForm';
+import Counter from './Counter/Counter';
 import GenreSelect from './GenreSelect/GenreSelect';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const geners=['Action', 'Comedy', 'Drama', 'Fantasy'];
   return (
     <div className="App">
-     <CounterForm/>
+     <Counter/>
      <SearchForm/>
-     <GenreSelect/>
+     <GenreSelect data={geners}/>
     </div>
   );
 }
