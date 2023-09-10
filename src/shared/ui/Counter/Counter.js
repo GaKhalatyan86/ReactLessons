@@ -1,11 +1,11 @@
 import React, { createElement, useState } from "react";
 
-class Counter extends React.Component {
+export class Counter extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      counter: 0
+      counter: props?.initialValue ?? 0 
     };
   }
 
@@ -28,5 +28,4 @@ class Counter extends React.Component {
   }
 }
 
-export default Counter
 
