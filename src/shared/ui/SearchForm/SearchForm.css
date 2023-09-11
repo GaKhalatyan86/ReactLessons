@@ -6,13 +6,13 @@
   -webkit-box-sizing: border-box;
 }
 
-.inputelement:before,
-.inputelement:after {
+.input-element:before,
+.input-element:after {
   content: "";
   display: table;
 }
 
-.inputelement:after {
+.input-element:after {
   clear: both;
 }
 

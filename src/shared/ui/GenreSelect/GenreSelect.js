@@ -1,5 +1,5 @@
 import react, { useState } from "react";
-import './GenerSelect.css';
+import './GenreSelect.css';
 
 export const GenreSelect = ({ genres = [], onSelect }) => {
   const handleButtonClick=(event)=>{
@@ -9,10 +9,10 @@ export const GenreSelect = ({ genres = [], onSelect }) => {
   return (
     <div>
       <ul>
-        {genres?.map((gener,index) =>{
+        {genres?.map((genre,index) =>{
         return(
           <li key={index}>
-            <button  value={gener} onClick={handleButtonClick}>{gener}</button>
+            <button  value={genre} onClick={handleButtonClick}>{genre}</button>
           </li>)}
           )}
       </ul>

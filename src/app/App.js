@@ -2,7 +2,7 @@ import './App.css';
 import { Counter } from "../shared/ui/Counter/Counter";
 import { GenreSelect } from "../shared/ui/GenreSelect/GenreSelect";
 import { SearchForm } from "../shared/ui/SearchForm/SearchForm";
-import { generList } from "../shared/ui/GenreSelect/GenerMockData";
+import { genreList } from "../shared/ui/GenreSelect/GenreMockData";
 
 export const App = () => {
   const handleSearch = (searchVal) => { };
@@ -17,7 +17,7 @@ export const App = () => {
         onSearch={handleSearch}
       />
       <GenreSelect
-        genres={generList}
+        genres={genreList}
         onSelect={handleChangeSelectedGenre}
       />
     </div>
