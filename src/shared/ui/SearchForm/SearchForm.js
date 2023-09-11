@@ -28,6 +28,5 @@ export const SearchForm = ({ initialValue = "", onSearch }) => {
       />
       <button type="button" onClick={handleSearchClick}>Search</button>
     </form>
-  )
-}
-
+  );
+};
