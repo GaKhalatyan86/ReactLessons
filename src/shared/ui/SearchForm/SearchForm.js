@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import './SearchForm.css'
 
 export const SearchForm = ({ initialValue = "", onSearch }) => {
-
   const [searchText, setSearchText] = useState(initialValue);
 
   const handleInputChange = (event) => {
