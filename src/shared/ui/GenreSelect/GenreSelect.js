@@ -7,7 +7,7 @@ export const GenreSelect = ({ genres = [], onSelect }) => {
   }
 
   return (
-    <nav>
+    <div>
       <ul>
         {genres?.map((gener,index) =>{
         return(
@@ -16,6 +16,6 @@ export const GenreSelect = ({ genres = [], onSelect }) => {
           </li>)}
           )}
       </ul>
-    </nav>
+    </div>
   );
 };

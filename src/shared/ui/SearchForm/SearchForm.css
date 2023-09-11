@@ -6,13 +6,13 @@
   -webkit-box-sizing: border-box;
 }
 
-.cf:before,
-.cf:after {
+.inputelement:before,
+.inputelement:after {
   content: "";
   display: table;
 }
 
-.cf:after {
+.inputelement:after {
   clear: both;
 }
 
