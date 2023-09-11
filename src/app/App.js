@@ -6,9 +6,9 @@ import { generList } from "../shared/ui/GenreSelect/GenerMockData";
 
 
 export const App = () => {
-  const handleSearch = (val) => { };
+  const handleSearch = (searchVal) => { };
 
-  const handleChangeSelectedGenre = (val) => { }
+  const handleChangeSelectedGenre = (searchVal) => { }
 
   return (
     <div className="App">
