@@ -4,7 +4,6 @@ import { GenreSelect } from "../shared/ui/GenreSelect/GenreSelect";
 import { SearchForm } from "../shared/ui/SearchForm/SearchForm";
 import { generList } from "../shared/ui/GenreSelect/GenerMockData";
 
-
 export const App = () => {
   const handleSearch = (searchVal) => { };
 
