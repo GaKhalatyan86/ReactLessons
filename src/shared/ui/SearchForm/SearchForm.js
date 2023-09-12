@@ -19,13 +19,13 @@ export const SearchForm = ({ initialValue = "", onSearch }) => {
   }
 
   return (
-    <form class="search-form input-element">
-      <input type="text" placeholder="Search...."
+    <form className="search-form input-element">
+      <input type="text" role="txtSearch" placeholder="Search...."
         value={searchText}
         onChange={handleInputChange}
         onKeyDown={handleKeyPress}
       />
-      <button type="button" onClick={handleSearchClick}>Search</button>
+      <button type="button" role="btnSearch" onClick={handleSearchClick}>Search</button>
     </form>
   );
 };
