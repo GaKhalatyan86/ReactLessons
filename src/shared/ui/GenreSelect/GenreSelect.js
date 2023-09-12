@@ -1,4 +1,3 @@
-import react, { useState } from "react";
 import './GenreSelect.css';
 
 export const GenreSelect = ({ genres = [], onSelect }) => {

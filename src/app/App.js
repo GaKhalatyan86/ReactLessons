@@ -1,8 +1,5 @@
 import './App.css';
-import { Counter } from "../shared/ui/Counter/Counter";
-import { GenreSelect } from "../shared/ui/GenreSelect/GenreSelect";
-import { SearchForm } from "../shared/ui/SearchForm/SearchForm";
-import { genreList } from "../shared/ui/GenreSelect/GenreMockData";
+import { Counter, GenreSelect, SearchForm, genreList } from "../shared/ui";
 
 export const App = () => {
   const handleSearch = (searchVal) => { };

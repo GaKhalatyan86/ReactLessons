@@ -1,11 +1,11 @@
-import React, { createElement, useState } from "react";
+import React, { createElement } from "react";
 
 export class Counter extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      counter: props?.initialValue ?? 0 
+      counter: props?.initialValue ?? 0
     };
   }
 
@@ -16,7 +16,7 @@ export class Counter extends React.Component {
   handleDecrement = () => {
     this.setState({ counter: this.state.counter - 1 });
   };
-  
+
   render() {
     return createElement(
       "div",
