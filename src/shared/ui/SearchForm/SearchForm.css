@@ -16,7 +16,7 @@
   clear: both;
 }
 
-.searchform {
+.search-form {
   background: #f4f4f4;
   background: rgba(244, 244, 244, .79);
   border: 1px solid #d3d3d3;
@@ -34,12 +34,12 @@
   -webkit-border-radius: 10px
 }
 
-.searchform input,
+.search-form input,
 .searchform button {
   float: left
 }
 
-.searchform input {
+.search-form input {
   background: #fefefe;
   border: none;
   font: 12px/12px 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -54,24 +54,24 @@
   -webkit-border-radius: 9px
 }
 
-.searchform input:focus {
+.search-form input:focus {
   outline: none;
   box-shadow: 0 0 4px #0d76be inset;
   -moz-box-shadow: 0 0 4px #0d76be inset;
   -webkit-box-shadow: 0 0 4px #0d76be inset;
 }
 
-.searchform input::-webkit-input-placeholder {
+.search-form input::-webkit-input-placeholder {
   font-style: italic;
   line-height: 15px
 }
 
-.searchform input:-moz-placeholder {
+.search-form input:-moz-placeholder {
   font-style: italic;
   line-height: 15px
 }
 
-.searchform button {
+.search-form button {
   background: rgb(52, 173, 236);
   background: -moz-linear-gradient(top, rgba(52, 173, 236, 1) 0%, rgba(38, 145, 220, 1) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(52, 173, 236, 1)), color-stop(100%, rgba(38, 145, 220, 1)));
@@ -94,6 +94,6 @@
   -webkit-border-radius: 9px;
 }
 
-.searchform button:hover {
+.search-form button:hover {
   opacity: .9;
 }

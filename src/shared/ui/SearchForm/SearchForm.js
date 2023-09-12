@@ -19,7 +19,7 @@ export const SearchForm = ({ initialValue = "", onSearch }) => {
   }
 
   return (
-    <form class="searchform input-element">
+    <form class="search-form input-element">
       <input type="text" placeholder="Search...."
         value={searchText}
         onChange={handleInputChange}
