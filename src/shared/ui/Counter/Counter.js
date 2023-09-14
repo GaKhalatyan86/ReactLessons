@@ -22,7 +22,7 @@ export class Counter extends React.Component {
       "div",
       null,
       createElement("button", { className: "btn btn-primary", onClick: this.handleIncrement }, "Increment"),
-      createElement("h1", {role:"cnt"}, this.state.counter),
+      createElement("h1", {"data-testid":"counter-input"}, this.state.counter),
       createElement("button", { className: "btn btn-primary", onClick: this.handleDecrement }, "Decrement"),
     );
   }

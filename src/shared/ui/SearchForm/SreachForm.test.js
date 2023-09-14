@@ -1,10 +1,11 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent } from "@testing-library/react";
+import { getByTestId, render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event'
 import { SearchForm } from './SearchForm';
 
 describe("SearchForm Component Functionality", () => {
-    test("Renders Search Form intitial value", () => {
+    test("Should render initial value", () => {
         const initialValue = "Hello World!";
         const OnSearchClick = jest.fn();
         render(
@@ -13,10 +14,10 @@ describe("SearchForm Component Functionality", () => {
                 onSearch={OnSearchClick}
             />
         );
-        expect(screen.getByRole('txtSearch')).toHaveValue('Hello World!')
+        expect(screen.getByTestId('search-input')).toHaveValue('Hello World!')
     });
 
-    test("Renders Search button click", () => {
+    test("Should get search value on button click event", () => {
         const initialValue = "Hello World!";
         const OnSearchClick = jest.fn((x) => x);
         render(
@@ -25,7 +26,7 @@ describe("SearchForm Component Functionality", () => {
                 onSearch={OnSearchClick}
             />
         );
-        fireEvent.click(screen.getByText('Search'));
+        userEvent.click(screen.getByText('Search'));
         expect(OnSearchClick.mock.results[0].value).toBe('Hello World!')
     });
 });

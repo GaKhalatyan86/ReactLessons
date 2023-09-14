@@ -1,28 +1,35 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event'
+import { act } from 'react-dom/test-utils'
 import { Counter } from "./Counter";
 
 describe("Counter Component Functionality", () => {
-    test("Renders Initial Value", () => {
+    test("Should render initial value", () => {
         const initialValue = 5;
         render(<Counter initialValue={initialValue} />);
         const initialValueElement = screen.getByText(initialValue);
         expect(initialValueElement).toBeInTheDocument();
     });
-    test("Decrement Button Functionality", () => {
+
+    test("Should decrement initial value on decrement button click", () => {
         const initialValue = 1;
         render(<Counter initialValue={initialValue} />);
         const decrementElement = screen.getByText('Decrement');
-        fireEvent.click(decrementElement);
-        expect(screen.getByRole('cnt')).toHaveTextContent("0");
+        act(() => {
+            userEvent.click(decrementElement);
+        });
+        expect(screen.getByTestId('counter-input')).toHaveTextContent("0");
     });
-    test("Increment Button Functionality", () => {
+
+    test("Should increment initial value on increment button click", async () => {
         const initialValue = 1;
         render(<Counter initialValue={initialValue} />);
         const decrementElement = screen.getByText('Increment');
-        fireEvent.click(decrementElement);
-        expect(screen.getByRole('cnt')).toHaveTextContent("2");
+        act(() => {
+            userEvent.click(decrementElement);
+        });
+        expect(screen.getByTestId('counter-input')).toHaveTextContent("2");
     });
-
 });

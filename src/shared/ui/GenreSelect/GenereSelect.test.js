@@ -1,11 +1,12 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event'
 import { GenreSelect } from "./GenreSelect";
 import { genreList } from "./GenreMockData";
 
 describe("GenreSelect Component Functionality", () => {
-    test("Renders All Genres", () => {
+    test("Should render all genres", () => {
         const OnGenreClick = jest.fn();
         render(
             <GenreSelect
@@ -18,7 +19,7 @@ describe("GenreSelect Component Functionality", () => {
         );
     });
 
-    test("Renders Genre select event", () => {
+    test("Should select genre on button click event", () => {
         const OnGenreClick = jest.fn((x) => x);
         render(
             <GenreSelect
@@ -27,8 +28,8 @@ describe("GenreSelect Component Functionality", () => {
             />
         );
         genreList.map((genre, index) => {
-            fireEvent.click(screen.getByText(genre))
-            expect(OnGenreClick.mock.results[index].value).toBe(genre);
+            userEvent.click(screen.getByText(genre))
+            expect(OnGenreClick.mock.results[index].value).toBe(genre)
         });
     });
 });
