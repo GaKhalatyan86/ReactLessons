@@ -6,27 +6,27 @@ import { SearchForm } from './SearchForm';
 
 describe("SearchForm Component Functionality", () => {
     test("Should render initial value", () => {
-        const initialValue = "Hello World!";
-        const OnSearchClick = jest.fn();
+        const mockedInitialValue = "Hello World!";
+        const onSearchClick = jest.fn();
         render(
             <SearchForm
-                initialValue={initialValue}
-                onSearch={OnSearchClick}
+                initialValue={mockedInitialValue}
+                onSearch={onSearchClick}
             />
         );
         expect(screen.getByTestId('search-input')).toHaveValue('Hello World!')
     });
 
     test("Should get search value on button click event", () => {
-        const initialValue = "Hello World!";
-        const OnSearchClick = jest.fn((x) => x);
+        const mockedInitialValue = "Hello World!";
+        const onSearchClick = jest.fn();
         render(
             <SearchForm
-                initialValue={initialValue}
-                onSearch={OnSearchClick}
+                initialValue={mockedInitialValue}
+                onSearch={onSearchClick}
             />
         );
         userEvent.click(screen.getByText('Search'));
-        expect(OnSearchClick.mock.results[0].value).toBe('Hello World!')
+        expect(onSearchClick).toBeCalledWith(mockedInitialValue)
     });
 });

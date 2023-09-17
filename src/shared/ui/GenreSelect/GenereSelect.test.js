@@ -7,11 +7,11 @@ import { genreList } from "./GenreMockData";
 
 describe("GenreSelect Component Functionality", () => {
     test("Should render all genres", () => {
-        const OnGenreClick = jest.fn();
+        const onGenreClick = jest.fn();
         render(
             <GenreSelect
                 genres={genreList}
-                onSearch={OnGenreClick}
+                onSearch={onGenreClick}
             />
         );
         genreList.map((genre) =>
@@ -20,16 +20,16 @@ describe("GenreSelect Component Functionality", () => {
     });
 
     test("Should select genre on button click event", () => {
-        const OnGenreClick = jest.fn((x) => x);
+        const onGenreClick = jest.fn();
         render(
             <GenreSelect
                 genres={genreList}
-                onSelect={OnGenreClick}
+                onSelect={onGenreClick}
             />
         );
         genreList.map((genre, index) => {
             userEvent.click(screen.getByText(genre))
-            expect(OnGenreClick.mock.results[index].value).toBe(genre)
+            expect(onGenreClick).toBeCalledWith(genre)
         });
     });
 });

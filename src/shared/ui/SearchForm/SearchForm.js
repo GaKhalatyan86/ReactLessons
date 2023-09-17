@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import './SearchForm.css'
 
-export const SearchForm = ({ initialValue = "", onSearch }) => {
+export const SearchForm = ({ initialValue = "1", onSearch }) => {
   const [searchText, setSearchText] = useState(initialValue);
 
   const handleInputChange = (event) => {
@@ -12,7 +12,7 @@ export const SearchForm = ({ initialValue = "", onSearch }) => {
     onSearch(searchText);
   };
 
-  const handleKeyPress=(event)=>{
+  const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       onSearch(searchText);
     }
@@ -20,12 +20,12 @@ export const SearchForm = ({ initialValue = "", onSearch }) => {
 
   return (
     <form className="search-form input-element">
-      <input type="text" data-testid="search-input" placeholder="Search...."
+      <input type="text" data-testid="search-input" data-cy="search-input" placeholder="Search...."
         value={searchText}
         onChange={handleInputChange}
         onKeyDown={handleKeyPress}
       />
-      <button type="button" onClick={handleSearchClick}>Search</button>
+      <button type="button" data-cy="button-input" onClick={handleSearchClick}>Search</button>
     </form>
   );
 };

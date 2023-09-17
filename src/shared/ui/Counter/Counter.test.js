@@ -7,15 +7,15 @@ import { Counter } from "./Counter";
 
 describe("Counter Component Functionality", () => {
     test("Should render initial value", () => {
-        const initialValue = 5;
-        render(<Counter initialValue={initialValue} />);
-        const initialValueElement = screen.getByText(initialValue);
+        const mockedInitialValue = 5;
+        render(<Counter initialValue={mockedInitialValue} />);
+        const initialValueElement = screen.getByText(mockedInitialValue);
         expect(initialValueElement).toBeInTheDocument();
     });
 
     test("Should decrement initial value on decrement button click", () => {
-        const initialValue = 1;
-        render(<Counter initialValue={initialValue} />);
+        const mockedInitialValue = 1;
+        render(<Counter initialValue={mockedInitialValue} />);
         const decrementElement = screen.getByText('Decrement');
         act(() => {
             userEvent.click(decrementElement);
@@ -24,8 +24,8 @@ describe("Counter Component Functionality", () => {
     });
 
     test("Should increment initial value on increment button click", async () => {
-        const initialValue = 1;
-        render(<Counter initialValue={initialValue} />);
+        const mockedInitialValue = 1;
+        render(<Counter initialValue={mockedInitialValue} />);
         const decrementElement = screen.getByText('Increment');
         act(() => {
             userEvent.click(decrementElement);
