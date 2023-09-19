@@ -17,7 +17,7 @@ describe("SearchForm Component Functionality", () => {
         expect(screen.getByTestId('search-input')).toHaveValue('Hello World!')
     });
 
-    test("Should get search value on button click event", () => {
+    test("Should get search value on submit click event", () => {
         const mockedInitialValue = "Hello World!";
         const onSearchClick = jest.fn();
         render(
@@ -26,7 +26,7 @@ describe("SearchForm Component Functionality", () => {
                 onSearch={onSearchClick}
             />
         );
-        userEvent.click(screen.getByText('Search'));
-        expect(onSearchClick).toBeCalledWith(mockedInitialValue)
+        userEvent.click(screen.getByTestId('button-input'))
+        expect(onSearchClick).toHaveBeenCalledWith(mockedInitialValue)
     });
 });

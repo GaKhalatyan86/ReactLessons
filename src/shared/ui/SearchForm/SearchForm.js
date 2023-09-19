@@ -8,10 +8,6 @@ export const SearchForm = ({ initialValue = "1", onSearch }) => {
     setSearchText(event.target.value);
   };
 
-  const handleSearchClick = () => {
-    onSearch(searchText);
-  };
-
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       onSearch(searchText);
@@ -19,13 +15,13 @@ export const SearchForm = ({ initialValue = "1", onSearch }) => {
   }
 
   return (
-    <form className="search-form input-element">
+    <form className="search-form input-element" onSubmit={() => onSearch(searchText)}>
       <input type="text" data-testid="search-input" data-cy="search-input" placeholder="Search...."
         value={searchText}
         onChange={handleInputChange}
         onKeyDown={handleKeyPress}
       />
-      <button type="button" data-cy="button-input" onClick={handleSearchClick}>Search</button>
+      <button type="submit" data-testid="button-input" data-cy="button-input">Search</button>
     </form>
   );
 };
