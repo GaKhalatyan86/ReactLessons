@@ -9,8 +9,7 @@ describe("Counter Component Functionality", () => {
     test("Should render initial value", () => {
         const mockedInitialValue = 5;
         render(<Counter initialValue={mockedInitialValue} />);
-        const initialValueElement = screen.getByText(mockedInitialValue);
-        expect(initialValueElement).toBeInTheDocument();
+        screen.getByText(mockedInitialValue);
     });
 
     test("Should decrement initial value on decrement button click", () => {

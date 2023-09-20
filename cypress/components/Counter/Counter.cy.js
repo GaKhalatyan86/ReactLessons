@@ -6,7 +6,6 @@ describe("Counter Component Functionality With Cypress Test", () => {
         const mockedInitialValue = 5;
         cy.mount(<Counter initialValue={mockedInitialValue} />);
         cy.get('[data-cy=counter-input]').should('have.text', mockedInitialValue)
-
     });
 
     it('Should decrement initial value on decrement button click', () => {

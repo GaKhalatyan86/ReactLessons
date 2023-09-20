@@ -15,7 +15,7 @@ describe("GenreSelect Component Functionality", () => {
             />
         );
         genreList.map((genre) =>
-            expect(screen.getByText(genre)).toBeInTheDocument()
+            screen.getByText(genre)
         );
     });
 
