@@ -21,9 +21,9 @@ export class Counter extends React.Component {
     return createElement(
       "div",
       null,
-      createElement("button", { className: "btn btn-primary", onClick: this.handleIncrement }, "Increment"),
-      createElement("h1", null, this.state.counter),
-      createElement("button", { className: "btn btn-primary", onClick: this.handleDecrement }, "Decrement"),
+      createElement("button", { className: "btn btn-primary", "data-cy": "increment-input", onClick: this.handleIncrement }, "Increment"),
+      createElement("h1", { "data-testid": "counter-input", "data-cy": "counter-input" }, this.state.counter),
+      createElement("button", { className: "btn btn-primary", "data-cy": "decrement-input", onClick: this.handleDecrement }, "Decrement"),
     );
   }
 }

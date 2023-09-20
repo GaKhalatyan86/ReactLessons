@@ -11,7 +11,7 @@ export const GenreSelect = ({ genres = [], onSelect }) => {
         {genres?.map((genre,index) =>{
         return(
           <li key={index}>
-            <button  value={genre} onClick={handleButtonClick}>{genre}</button>
+            <button data-cy={index} value={genre} onClick={handleButtonClick}>{genre}</button>
           </li>)}
           )}
       </ul>
