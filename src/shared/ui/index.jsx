@@ -6,3 +6,5 @@ export { MovieTitle } from './MovieTitle/MovieTitle';
 export { movieTitleData } from './MovieTitle/MovieTitleMockData';
 export { MovieDetail } from './MovieDetail/MovieDetail';
 export { movieDetailData } from './MovieDetail/MovieDetailMockData';
+export {SortForm} from './SortControl/SortControl';
+export {moviesSortOptions} from './SortControl/SortControlMockData';

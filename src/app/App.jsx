@@ -1,5 +1,5 @@
 import './App.css';
-import { Counter, GenreSelect, SearchForm, genreList, movieTitleData, MovieTitle,movieDetailData,MovieDetail } from "../shared/ui";
+import { Counter, GenreSelect, SearchForm, genreList, movieTitleData, MovieTitle, movieDetailData, MovieDetail, SortForm, moviesSortOptions } from "../shared/ui";
 
 export const App = () => {
   const handleSearch = (searchVal) => { };
@@ -8,7 +8,7 @@ export const App = () => {
 
   const handleSelectMovieTitile = (selectedVal) => {
     alert(selectedVal);
-   }
+  }
 
   return (
     <div className="App">
@@ -30,14 +30,10 @@ export const App = () => {
         onSelect={handleSelectMovieTitile}
       />
 
-       <MovieDetail
-        imageUrl={movieDetailData.imageUrl}
-        movieName={movieDetailData.movieName}
-        rating={movieDetailData.rating}
-        releaseYear={movieDetailData.releaseYear}
-        duration={movieDetailData.duration}
-        description={movieDetailData.description}
+      <MovieDetail
+        movieInfo={movieDetailData}
       />
+
     </div>
   );
 };

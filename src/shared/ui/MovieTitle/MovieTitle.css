@@ -11,7 +11,12 @@
 .container {
   padding: 2px 16px;
 }
+
 img {
   height: 50px;
   width: 50px;
+}
+
+.title {
+  font-weight: bold;
 }

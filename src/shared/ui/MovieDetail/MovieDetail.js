@@ -1,19 +1,19 @@
 import React from 'react';
 import './MovieDetail.css';
 
-export const MovieDetail = ({ imageUrl, movieName, releaseYear, rating, duration, description }) => {
+export const MovieDetail = (props) => {
 
     return (
-        <div className="row">
+        <div className="wrapper">
             <div className="column">
-                <img src={imageUrl} alt='image' />
+                <img src={props.movieInfo.imageUrl} alt='image' />
             </div>
             <div className="column">
-            <p>{movieName}</p>
-            <p data-cy="paragraph-text" data-testid="paragraph-text">Year {releaseYear}</p>
-            <p>Rating {rating}</p>
-            <p>Duration {duration}</p>
-            <p>Description {description}</p>
+            <p>{props.movieInfo.movieName}</p>
+            <p data-cy="paragraph-text" data-testid="paragraph-text">Year {props.movieInfo.releaseYear}</p>
+            <p>Rating {props.movieInfo.rating}</p>
+            <p>Duration {props.movieInfo.duration}</p>
+            <p>Description {props.movieInfo.description}</p>
             </div>
         </div>
     )

@@ -10,14 +10,9 @@ describe("MovieDetail Component Functionality", () => {
 
         render(
             <MovieDetail
-                imageUrl={movieDetailData.imageUrl}
-                movieName={movieDetailData.movieName}
-                rating={movieDetailData.rating}
-                releaseYear={movieDetailData.releaseYear}
-                duration={movieDetailData.duration}
-                description={movieDetailData.description}
+                movieInfo={movieDetailData}
             />
         );
-        expect(screen.getByTestId('paragraph-text')).toHaveTextContent("Year "+movieDetailData.releaseYear)
+        expect(screen.getByTestId('paragraph-text')).toHaveTextContent("Year " + movieDetailData.releaseYear)
     });
 });

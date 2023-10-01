@@ -5,9 +5,9 @@ export const MovieTitle = ({ imageUrl, movieName, releaseYear, genres = [], onSe
 
     return (
         <div className="card">
-            <img src={process.env.PUBLIC_URL+imageUrl} alt="Avatar" />
+            <img src={imageUrl} alt="Avatar" />
             <div className="container">
-                <h4><b>{movieName}</b></h4>
+                <h4 className='title'>{movieName}</h4>
                 <p  data-cy="paragraph-text" data-testid="paragraph-text">Year {releaseYear}</p>
                 <p>genres
                     {genres.map((genre) => {

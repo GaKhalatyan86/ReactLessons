@@ -6,12 +6,7 @@ describe("MovieDetail Component Functionality With Cypress", () => {
     it("Should render mock values", () => {
         cy.mount(
             <MovieDetail
-                imageUrl={movieDetailData.imageUrl}
-                movieName={movieDetailData.movieName}
-                rating={movieDetailData.rating}
-                releaseYear={movieDetailData.releaseYear}
-                duration={movieDetailData.duration}
-                description={movieDetailData.description}
+                movieInfo={movieDetailData}
             />
         );
         cy.get('[data-cy="paragraph-text"]').should('have.text', "Year " + movieDetailData.releaseYear)
