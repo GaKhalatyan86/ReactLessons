@@ -18,6 +18,11 @@
 .env.test.local
 .env.production.local
 
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
