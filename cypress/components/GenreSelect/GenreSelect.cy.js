@@ -8,7 +8,7 @@ describe("GenreSelect Component Functionality With Cypress", () => {
         cy.mount(
             <GenreSelect
                 genres={genreList}
-                onSearch={onGenreClick}
+                onClick={onGenreClick}
             />
         );
         genreList.map((genre, index) =>
@@ -21,7 +21,7 @@ describe("GenreSelect Component Functionality With Cypress", () => {
         cy.mount(
             <GenreSelect
                 genres={genreList}
-                onSelect={onGenreClick}
+                onClick={onGenreClick}
             />
         );
         genreList.map((genre, index) => {

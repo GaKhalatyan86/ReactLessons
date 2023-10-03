@@ -15,7 +15,7 @@ describe("MovieTitle Component Functionality", () => {
                 movieName={movieTitleData.movieName}
                 releaseYear={movieTitleData.releaseYear}
                 genres={movieTitleData.genres}
-                onSelect={onMovieClick}
+                onClick={onMovieClick}
             />
         );
         expect(screen.getByTestId('paragraph-text')).toHaveTextContent('Year ' + movieTitleData.releaseYear)
@@ -29,7 +29,7 @@ describe("MovieTitle Component Functionality", () => {
                 movieName={movieTitleData.movieName}
                 releaseYear={movieTitleData.releaseYear}
                 genres={movieTitleData.genres}
-                onSelect={onMovieClick}
+                onClick={onMovieClick}
             />
         );
         userEvent.click(screen.getByTestId('input-button'));

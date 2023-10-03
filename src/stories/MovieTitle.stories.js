@@ -15,5 +15,5 @@ Default.args = {
     movieName: movieTitleData.movieName,
     releaseYear: movieTitleData.releaseYear,
     genres: movieTitleData.genres,
-    onSelect: ()=>{}
+    onClick: () => { }
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import './GenreSelect.css';
 
-export const GenreSelect = ({ genres = [], onSelect }) => {
+export const GenreSelect = ({ genres = [], onClick }) => {
   const handleButtonClick = (event) => {
     onSelect(event.target.value);
   }

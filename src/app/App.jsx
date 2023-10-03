@@ -6,9 +6,7 @@ export const App = () => {
 
   const handleChangeSelectedGenre = (searchVal) => { }
 
-  const handleSelectMovieTitile = (selectedVal) => {
-    alert(selectedVal);
-  }
+  const handleSelectMovieTitle = (selectedVal) => { }
 
   return (
     <div className="App">
@@ -19,7 +17,7 @@ export const App = () => {
       />
       <GenreSelect
         genres={genreList}
-        onSelect={handleChangeSelectedGenre}
+        onClick={handleChangeSelectedGenre}
       />
 
       <MovieTitle
@@ -27,7 +25,7 @@ export const App = () => {
         movieName={movieTitleData.movieName}
         releaseYear={movieTitleData.releaseYear}
         genres={movieTitleData.genres}
-        onSelect={handleSelectMovieTitile}
+        onClick={handleSelectMovieTitle}
       />
 
       <MovieDetail

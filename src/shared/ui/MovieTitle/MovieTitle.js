@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieTitle.css';
 
-export const MovieTitle = ({ imageUrl, movieName, releaseYear, genres = [], onSelect }) => {
+export const MovieTitle = ({ imageUrl, movieName, releaseYear, genres = [], onClick }) => {
 
     return (
         <div className="card">
@@ -16,7 +16,7 @@ export const MovieTitle = ({ imageUrl, movieName, releaseYear, genres = [], onSe
                         );
                     })}
                 </p>
-                <button data-testid="input-button" onClick={() => onSelect(movieName)}>Click Me!</button>
+                <button data-testid="input-button" onClick={() => onClick(movieName)}>Click Me!</button>
             </div>
         </div>
     )
