@@ -1,5 +1,5 @@
 import React from "react";
-import { Counter } from "../../../src/shared/ui/Counter/Counter"
+import { Counter } from "../../../src/entities/Counter/Counter"
 
 describe("Counter Component Functionality With Cypress Test", () => {
     it("Should render initial value", () => {

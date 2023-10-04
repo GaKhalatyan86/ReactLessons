@@ -3,7 +3,7 @@ import './GenreSelect.css';
 
 export const GenreSelect = ({ genres = [], onClick }) => {
   const handleButtonClick = (event) => {
-    onSelect(event.target.value);
+    onClick(event.target.value);
   }
 
   return (

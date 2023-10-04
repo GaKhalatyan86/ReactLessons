@@ -1,5 +1,5 @@
-import { GenreSelect } from "../shared/ui";
-import { genreList } from "../shared/ui";
+import { GenreSelect } from "../entities";
+import { genreList } from "../entities";
 
 export default {
     title: "GenreSelect",

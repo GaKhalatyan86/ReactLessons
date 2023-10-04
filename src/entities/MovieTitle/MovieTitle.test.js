@@ -11,10 +11,7 @@ describe("MovieTitle Component Functionality", () => {
         const onMovieClick = jest.fn();
         render(
             <MovieTitle
-                imageUrl={movieTitleData.imageUrl}
-                movieName={movieTitleData.movieName}
-                releaseYear={movieTitleData.releaseYear}
-                genres={movieTitleData.genres}
+                movieTitleData={movieTitleData}
                 onClick={onMovieClick}
             />
         );
@@ -25,10 +22,7 @@ describe("MovieTitle Component Functionality", () => {
         const onMovieClick = jest.fn();
         render(
             <MovieTitle
-                imageUrl={movieTitleData.imageUrl}
-                movieName={movieTitleData.movieName}
-                releaseYear={movieTitleData.releaseYear}
-                genres={movieTitleData.genres}
+                movieTitleData={movieTitleData}
                 onClick={onMovieClick}
             />
         );

@@ -1,4 +1,4 @@
-import { Counter } from "../shared/ui";
+import { Counter } from "../entities";
 
 export default {
   title: "Counter",

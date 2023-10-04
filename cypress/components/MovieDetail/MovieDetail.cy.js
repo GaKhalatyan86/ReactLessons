@@ -1,6 +1,6 @@
 import React from "react";
-import { MovieDetail } from "../../../src/shared/ui";
-import { movieDetailData } from "../../../src/shared/ui";
+import { MovieDetail } from "../../../src/entities";
+import { movieDetailData } from "../../../src/entities";
 
 describe("MovieDetail Component Functionality With Cypress", () => {
     it("Should render mock values", () => {

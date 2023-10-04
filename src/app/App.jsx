@@ -1,5 +1,5 @@
 import './App.css';
-import { Counter, GenreSelect, SearchForm, genreList, movieTitleData, MovieTitle, movieDetailData, MovieDetail, SortForm, moviesSortOptions } from "../shared/ui";
+import { Counter, GenreSelect, SearchForm, genreList, movieTitleData, MovieTitle, movieDetailData, MovieDetail, SortForm, moviesSortOptions } from "../entities";
 
 export const App = () => {
   const handleSearch = (searchVal) => { };
@@ -21,10 +21,7 @@ export const App = () => {
       />
 
       <MovieTitle
-        imageUrl={movieTitleData.imageUrl}
-        movieName={movieTitleData.movieName}
-        releaseYear={movieTitleData.releaseYear}
-        genres={movieTitleData.genres}
+        movieTitleData={movieTitleData}
         onClick={handleSelectMovieTitle}
       />
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { MovieTitle } from "../../../src/shared/ui";
-import { movieTitleData } from "../../../src/shared/ui";
+import { MovieTitle } from "../../../src/entities";
+import { movieTitleData } from "../../../src/entities";
 
 describe("MovieTitle Component Functionality With Cypress", () => {
     it("Should render mock values", () => {
@@ -12,7 +12,7 @@ describe("MovieTitle Component Functionality With Cypress", () => {
                 movieName={movieTitleData.movieName}
                 releaseYear={movieTitleData.releaseYear}
                 genres={movieTitleData.genres}
-                onSelect={onClick}
+                onClick={onClick}
             />
         );
         cy.get('[data-cy="paragraph-text"]').should('have.text', "Year " + movieTitleData.releaseYear)

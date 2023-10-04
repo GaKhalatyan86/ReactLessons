@@ -1,5 +1,5 @@
-import { MovieDetail } from "../shared/ui";
-import { movieDetailData } from "../shared/ui";
+import { MovieDetail } from "../entities";
+import { movieDetailData } from "../entities";
 
 export default {
     title: "MovieDetail",

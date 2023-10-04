@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchForm } from "../../../src/shared/ui";
+import { SearchForm } from "../../../src/entities";
 
 describe("SearchForm Component Functionality With Cypress", () => {
     it("Should render initial value", () => {
