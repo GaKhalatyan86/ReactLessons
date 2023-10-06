@@ -11,7 +11,7 @@ describe("GenreSelect Component Functionality", () => {
         render(
             <GenreSelect
                 genres={genreList}
-                onSearch={onGenreClick}
+                onClick={onGenreClick}
             />
         );
         genreList.map((genre) =>
@@ -24,7 +24,7 @@ describe("GenreSelect Component Functionality", () => {
         render(
             <GenreSelect
                 genres={genreList}
-                onSelect={onGenreClick}
+                onClick={onGenreClick}
             />
         );
         genreList.map((genre, index) => {

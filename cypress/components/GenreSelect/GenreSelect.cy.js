@@ -1,6 +1,6 @@
 import React from 'react';
-import { GenreSelect } from '../../../src/shared/ui';
-import { genreList } from '../../../src/shared/ui';
+import { GenreSelect } from '../../../src/entities';
+import { genreList } from '../../../src/entities';
 
 describe("GenreSelect Component Functionality With Cypress", () => {
     it("Should render all genres", () => {
@@ -8,7 +8,7 @@ describe("GenreSelect Component Functionality With Cypress", () => {
         cy.mount(
             <GenreSelect
                 genres={genreList}
-                onSearch={onGenreClick}
+                onClick={onGenreClick}
             />
         );
         genreList.map((genre, index) =>
@@ -21,7 +21,7 @@ describe("GenreSelect Component Functionality With Cypress", () => {
         cy.mount(
             <GenreSelect
                 genres={genreList}
-                onSelect={onGenreClick}
+                onClick={onGenreClick}
             />
         );
         genreList.map((genre, index) => {
